@@ -64,7 +64,7 @@ public class PlayerParamitrisable extends TypedParamitrisable<Player>
 		return getPlayerNames(max, Bukkit.getOnlinePlayers());
 	}
 
-	public static Set<String> getPlayerNames(final Collection<Player> players)
+	public static Set<String> getPlayerNames(final Collection<? extends Player> players)
 	{
 		final Set<String> res = new TreeSet<String>();
 		for (final Player player : players)
@@ -72,7 +72,7 @@ public class PlayerParamitrisable extends TypedParamitrisable<Player>
 		return res;
 	}
 
-	public static Set<String> getPlayerNames(int max, final Collection<Player> players)
+	public static Set<String> getPlayerNames(int max, final Collection<? extends Player> players)
 	{
 		final Set<String> res = new TreeSet<String>();
 		for (final Player player : players)
@@ -108,7 +108,7 @@ public class PlayerParamitrisable extends TypedParamitrisable<Player>
 		return getMatchingPlayers(parameter, max, Bukkit.getOnlinePlayers());
 	}
 
-	public static List<Player> getMatchingPlayers(String parameter, final Collection<Player> players)
+	public static List<Player> getMatchingPlayers(String parameter, final Collection<? extends Player> players)
 	{
 		parameter = parameter.toLowerCase();
 		final List<Player> res = new ArrayList<Player>();
@@ -118,7 +118,7 @@ public class PlayerParamitrisable extends TypedParamitrisable<Player>
 		return res;
 	}
 
-	public static List<Player> getMatchingPlayers(String parameter, int max, final Collection<Player> players)
+	public static List<Player> getMatchingPlayers(String parameter, int max, final Collection<? extends Player> players)
 	{
 		parameter = parameter.toLowerCase();
 		final List<Player> res = new ArrayList<Player>();

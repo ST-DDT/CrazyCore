@@ -73,7 +73,7 @@ public class VisiblePlayerParamitrisable extends PlayerParamitrisable
 		return getPlayerNames(canBeSeenBy, max, Bukkit.getOnlinePlayers());
 	}
 
-	public static Set<String> getPlayerNames(final Player canBeSeenBy, final Collection<Player> players)
+	public static Set<String> getPlayerNames(final Player canBeSeenBy, final Collection<? extends Player> players)
 	{
 		final Set<String> res = new TreeSet<String>();
 		for (final Player player : players)
@@ -82,7 +82,7 @@ public class VisiblePlayerParamitrisable extends PlayerParamitrisable
 		return res;
 	}
 
-	public static Set<String> getPlayerNames(final Player canBeSeenBy, int max, final Collection<Player> players)
+	public static Set<String> getPlayerNames(final Player canBeSeenBy, int max, final Collection<? extends Player> players)
 	{
 		final Set<String> res = new TreeSet<String>();
 		for (final Player player : players)
@@ -121,7 +121,7 @@ public class VisiblePlayerParamitrisable extends PlayerParamitrisable
 		return getMatchingPlayers(canBeSeenBy, parameter, max, Bukkit.getOnlinePlayers());
 	}
 
-	public static List<Player> getMatchingPlayers(final Player canBeSeenBy, String parameter, final Collection<Player> players)
+	public static List<Player> getMatchingPlayers(final Player canBeSeenBy, String parameter, final Collection<? extends Player> players)
 	{
 		parameter = parameter.toLowerCase();
 		final List<Player> res = new ArrayList<Player>();
@@ -132,7 +132,7 @@ public class VisiblePlayerParamitrisable extends PlayerParamitrisable
 		return res;
 	}
 
-	public static List<Player> getMatchingPlayers(final Player canBeSeenBy, String parameter, int max, final Collection<Player> players)
+	public static List<Player> getMatchingPlayers(final Player canBeSeenBy, String parameter, int max, final Collection<? extends Player> players)
 	{
 		parameter = parameter.toLowerCase();
 		final List<Player> res = new ArrayList<Player>();

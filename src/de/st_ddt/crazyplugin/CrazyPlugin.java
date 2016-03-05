@@ -54,7 +54,7 @@ public abstract class CrazyPlugin extends CrazyLightPlugin implements CrazyPlugi
 		return plugins.values();
 	}
 
-	public final static CrazyPlugin getPlugin(final Class<? extends CrazyPlugin> plugin)
+	public final static CrazyPlugin getPlugins(final Class<? extends CrazyPlugin> plugin)
 	{
 		return plugins.get(plugin);
 	}
