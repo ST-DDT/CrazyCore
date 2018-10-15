@@ -74,8 +74,8 @@ public class CrazyListener implements Listener
 		final OfflinePlayer player = Bukkit.getOfflinePlayer(event.getPlayer());
 		if (player != null)
 		{
-			if (plugin.isWipingPlayerBansEnabled())
-				player.setBanned(false);
+//			if (plugin.isWipingPlayerBansEnabled())
+//				player.setBanned(false);
 			player.setOp(false);
 			player.setWhitelisted(false);
 		}

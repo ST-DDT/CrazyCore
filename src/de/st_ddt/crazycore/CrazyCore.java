@@ -237,8 +237,8 @@ public final class CrazyCore extends CrazyPlugin
 		final PluginManager pm = Bukkit.getPluginManager();
 		pm.registerEvents(new CrazyListener(this), this);
 		pm.registerEvents(new PlayerListener(this), this);
-		final Messenger ms = Bukkit.getMessenger();
-		ms.registerIncomingPluginChannel(this, "CrazyCore", new MessageListener(this));
+//		final Messenger ms = Bukkit.getMessenger();
+//		ms.registerIncomingPluginChannel(this, "CrazyCore", new MessageListener(this));
 	}
 
 	private void registerMetrics()
